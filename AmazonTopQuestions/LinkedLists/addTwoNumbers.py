@@ -47,7 +47,7 @@ def addTwoNumbers(l1, l2):
 if __name__ == '__main__':
     l1 = initialize_list([2,4,3])
     l2 = initialize_list([5,6,4])
-    assert is_list_equal(addTwoNumbers(l1, l2), initialize_list([7,0,8])) == True
+    assert is_list_equal(addTwoNumbers(l1, l2), initialize_list([7,0,8]))
     l1 = initialize_list([9,9,9,9,9,9,9])
     l2 = initialize_list([9,9,9,9])
-    assert is_list_equal(addTwoNumbers(l1, l2), initialize_list([8,9,9,9,0,0,0,1])) == True
+    assert is_list_equal(addTwoNumbers(l1, l2), initialize_list([8,9,9,9,0,0,0,1]))
