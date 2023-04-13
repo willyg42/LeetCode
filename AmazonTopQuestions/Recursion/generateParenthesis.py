@@ -1,17 +1,19 @@
 def generateParenthesis(n):
     result = []
-    def generate(op = 0, closed = 0, res = []):
-        if len(res) == 2 * n:
-            result.append(''.join(res))
-            return
-        if op < n:
-            res.append('(')
-            generate(op + 1, closed, res)
-            res.pop()
-        if closed < op:
-            res.append(')')
-            generate(op, closed + 1, res)
-            res.pop()
+    
+    def generate(nOpen = 0, nClosed = 0, r=[]):
+        if len(r) == n * 2:
+            result.append(''.join(r))
+            return result
+        if nOpen < n:
+            r.append('(')
+            generate(nOpen + 1, nClosed, r)
+            r.pop()
+        if nClosed < nOpen:
+            r.append(')')
+            generate(nOpen, nClosed + 1, r)
+            r.pop()
+
     generate()
     return result
 
